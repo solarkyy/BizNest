@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: solarkyy/BizNest        # your GitHub user/repo
+  branch: master                # the branch your site is on
+
+media_folder: ""                # no uploads for now
+public_folder: ""
+
+collections:
+  - name: "home"
+    label: "Homepage"
+    files:
+      - label: "Index"
+        name: "index"
+        file: "index.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Hero Text", name: "hero", widget: "text" }
