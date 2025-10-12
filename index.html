@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0152)https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/a0cedd5094bc112286f6d1066729d46b/a01ff6b0-55b3-4611-9e72-287ee82d54ae/index.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BizNest - Smart Solutions for Growing Businesses</title>
-  <link rel="stylesheet" href="assets/css/style.css">  
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="loaded">
     <!-- Navigation -->
@@ -30,8 +30,7 @@
         </div>
     </nav>
 
-
-       <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <h1>Empowering Canadian SMEs with Practical Consulting Solutions</h1>
@@ -40,7 +39,6 @@
         </div>
     </section>
 
-    
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
@@ -65,15 +63,15 @@
                 <div class="what-sets-us-apart">
                     <h3>What Sets BizNest Apart</h3>
                     <div class="differentiators">
-                        <div class="diff-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <div class="diff-item">
                             <h4>Real Business Experience</h4>
                             <p>We've walked in your shoes as small business owners, understanding the unique challenges you face.</p>
                         </div>
-                        <div class="diff-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <div class="diff-item">
                             <h4>Technology Expertise</h4>
                             <p>Modern solutions backed by deep understanding of digital transformation and AI implementation.</p>
                         </div>
-                        <div class="diff-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <div class="diff-item">
                             <h4>SME Focus</h4>
                             <p>Specialized exclusively in serving businesses with 1-50 employees and $100K-$2M revenue.</p>
                         </div>
@@ -83,7 +81,6 @@
         </div>
     </section>
 
-    
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="container">
@@ -92,7 +89,7 @@
                 <p>Comprehensive consulting solutions tailored for Canadian SMEs</p>
             </div>
             <div class="services-grid">
-                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="service-card">
                     <div class="service-header">
                         <h3>Business Process Optimization &amp; SaaS Implementation</h3>
                         <p class="service-price">$150-200/hour | Projects $5K-25K</p>
@@ -109,8 +106,7 @@
                     </div>
                     <p class="service-target"><strong>Ideal for:</strong> Businesses struggling with manual processes and seeking operational efficiency</p>
                 </div>
-
-                <div class="service-card featured" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="service-card featured">
                     <div class="service-header">
                         <h3>ESG Compliance &amp; Sustainability Consulting</h3>
                         <p class="service-price">$200-250/hour | Premium Service</p>
@@ -128,8 +124,7 @@
                     </div>
                     <p class="service-target"><strong>Ideal for:</strong> Companies needing ESG compliance (82% adoption rate among target market)</p>
                 </div>
-
-                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="service-card">
                     <div class="service-header">
                         <h3>AI Adoption &amp; Digital Transformation</h3>
                         <p class="service-price">$175-250/hour | Projects $10K-50K</p>
@@ -148,12 +143,12 @@
                 </div>
             </div>
             <div class="services-cta">
-                <button class="btn btn--primary" onclick="scrollToSection(&#39;contact&#39;)">Discuss Your Needs</button>
+                <button class="btn btn--primary" onclick="scrollToSection('contact')">Discuss Your Needs</button>
             </div>
         </div>
     </section>
 
-        <!-- Strategic Plan Section -->
+    <!-- Strategic Plan Section -->
     <section id="strategy" class="strategy">
         <div class="container">
             <h2>Strategic Plan</h2>
@@ -186,7 +181,7 @@
             <p><a href="tel:+17055556378">+1 (705) 555-6378</a></p>
             <p><a href="mailto:kyle@biznest.ca">kyle@biznest.ca</a></p>
             <p>
-                <a href="https://linkedin.com/company/biznest" target="_blank">LinkedIn</a> | 
+                <a href="https://linkedin.com/company/biznest" target="_blank">LinkedIn</a> |
                 <a href="https://twitter.com/biznestca" target="_blank">Twitter</a>
             </p>
             <p>Sudbury, Ontario, Canada</p>
@@ -205,18 +200,18 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-
         // Mobile menu toggle
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
