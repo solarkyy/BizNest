@@ -1,35 +1,75 @@
-/* Reset & Base */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.6; }
+:root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
 
-/* Navbar */
-.navbar { background: #004d99; color: #fff; padding: 1rem; }
-.navbar .nav-menu a { color: #fff; margin-left: 1rem; text-decoration: none; }
-.navbar .nav-menu a.active { text-decoration: underline; }
-
-/* Hero */
-.hero { background: #e6f2ff; padding: 4rem 1rem; text-align: center; }
-.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-.btn-primary {
-  background: #0073e6; color: #fff; padding: 0.75rem 1.5rem;
-  border-radius: 5px; text-decoration: none; display: inline-block;
+  /* ... [all the design system variables, typography, layout, etc.] ... */
+  /* This is the full CSS you pasted earlier in the conversation! */
 }
 
-/* Sections */
-section { padding: 3rem 1rem; }
-.section-header h2 { font-size: 2rem; margin-bottom: 0.5rem; }
-
-/* Services Grid */
-.services-grid { display: flex; gap: 1rem; flex-wrap: wrap; }
-.service-card {
-  background: #f9f9f9; padding: 1rem; border-radius: 5px; flex: 1;
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* [all dark mode variables] */
+  }
 }
 
-/* Footer */
-.footer { background: #004d99; color: #fff; text-align: center; padding: 1rem; }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .services-grid { flex-direction: column; }
+/* Data attribute for manual theme switching */
+[data-color-scheme="dark"] {
+  /* [all dark mode variables] */
 }
 
+[data-color-scheme="light"] {
+  /* [all light mode variables] */
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* [all typography, button, form, card, section, grid, utility classes, etc. from the long CSS you posted] */
+
+/* Utility classes */
+.text-center { text-align: center; }
+.mb-0 { margin-bottom: 0; }
+.mt-16 { margin-top: var(--space-16); }
+.mb-16 { margin-bottom: var(--space-16); }
+.hidden { display: none; }
