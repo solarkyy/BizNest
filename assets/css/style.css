@@ -32,3 +32,4 @@ section { padding: 3rem 1rem; }
 @media (max-width: 768px) {
   .services-grid { flex-direction: column; }
 }
+
