@@ -6,6 +6,35 @@
     <title>BizNest - Smart Solutions for Growing Businesses</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
+        body {
+            /* Subtle gradient background with a slight teal flare */
+            background: linear-gradient(120deg, #222 0%, #1a2636 100%);
+            position: relative;
+            min-height: 100vh;
+        }
+        body::after {
+            /* Radial teal flare in bottom right */
+            content: "";
+            position: fixed;
+            z-index: 0;
+            bottom: -120px;
+            right: -120px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle at 30% 30%, #12d7e6 0%, transparent 70%);
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        body::before {
+            /* Subtle noise overlay for texture */
+            content: "";
+            position: fixed;
+            z-index: 0;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: url('https://www.transparenttextures.com/patterns/noise.png');
+            opacity: 0.08;
+            pointer-events: none;
+        }
         /* Sticky CTA Button */
         .cta-sticky {
             position: fixed;
