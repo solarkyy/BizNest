@@ -7,13 +7,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         body {
-            /* Subtle gradient background with a slight teal flare */
             background: linear-gradient(120deg, #222 0%, #1a2636 100%);
             position: relative;
             min-height: 100vh;
         }
         body::after {
-            /* Radial teal flare in bottom right */
             content: "";
             position: fixed;
             z-index: 0;
@@ -26,7 +24,6 @@
             pointer-events: none;
         }
         body::before {
-            /* Subtle noise overlay for texture */
             content: "";
             position: fixed;
             z-index: 0;
@@ -49,7 +46,7 @@
             border-radius: 32px;
             font-size: 1rem;
             padding: 18px 32px;
-            box-shadow: 0 4px 16px rgba(18, 215, 230, 0.15);
+            /* box-shadow removed for flat style */
             cursor: pointer;
             transition: background 0.2s;
         }
@@ -91,6 +88,44 @@
         .newsletter-signup button:hover {
             background: #0ca3b2;
         }
+        /* Service Card Styles */
+        .services-grid {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background: #222;
+            color: #fff;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            flex: 1 1 340px;
+            min-width: 300px;
+            position: relative;
+        }
+        /* Card border for 2nd and 3rd card */
+        .service-card.with-border {
+            border: 2px solid #12d7e6;
+        }
+        /* Premium badge style */
+        .premium-badge {
+            background: #12d7e6;
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 12px;
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        @media (max-width: 900px) {
+            .services-grid {
+                flex-direction: column;
+            }
+        }
         @media (max-width: 600px) {
             .cta-sticky {
                 right: 12px;
@@ -98,6 +133,9 @@
             }
             .newsletter-signup input[type="email"] {
                 width: 160px;
+            }
+            .service-card {
+                padding: 16px;
             }
         }
     </style>
@@ -226,7 +264,6 @@
                 <div class="service-card">
                     <div class="service-header">
                         <h3>Business Process Optimization &amp; SaaS Implementation</h3>
-                        <!-- REMOVED: <p class="service-price">$150-200/hour | Projects $5K-25K</p> -->
                     </div>
                     <p class="service-description">Streamline operations and implement the right software tools to boost efficiency and productivity.</p>
                     <div class="service-features">
@@ -241,10 +278,9 @@
                     <p class="service-target"><strong>Ideal for:</strong> Businesses struggling with manual processes and seeking operational efficiency</p>
                 </div>
 
-                <div class="service-card featured">
+                <div class="service-card with-border">
                     <div class="service-header">
                         <h3>ESG Compliance &amp; Sustainability Consulting</h3>
-                        <!-- REMOVED: <p class="service-price">$200-250/hour | Premium Service</p> -->
                         <span class="premium-badge">Premium</span>
                     </div>
                     <p class="service-description">Navigate ESG requirements and build sustainable practices that meet regulatory standards.</p>
@@ -260,10 +296,9 @@
                     <p class="service-target"><strong>Ideal for:</strong> Companies needing ESG compliance (82% adoption rate among target market)</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card with-border">
                     <div class="service-header">
                         <h3>AI Adoption &amp; Digital Transformation</h3>
-                        <!-- REMOVED: <p class="service-price">$175-250/hour | Projects $10K-50K</p> -->
                     </div>
                     <p class="service-description">Practical AI implementation and digital transformation to stay competitive in the modern market.</p>
                     <div class="service-features">
@@ -554,6 +589,6 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+ <script src="app.js"></script>
 </body>
 </html>
