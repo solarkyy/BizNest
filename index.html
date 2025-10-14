@@ -48,11 +48,11 @@
             padding: 18px 32px;
             cursor: pointer;
             transition: background 0.2s;
+            /* No box-shadow or highlight */
         }
         .cta-sticky-btn:hover {
             background: #0ca3b2;
         }
-        /* Newsletter Signup */
         .newsletter-signup {
             background: #222;
             color: #fff;
@@ -87,7 +87,6 @@
         .newsletter-signup button:hover {
             background: #0ca3b2;
         }
-        /* Service Card Styles */
         .services-grid {
             display: flex;
             gap: 32px;
@@ -102,11 +101,7 @@
             flex: 1 1 340px;
             min-width: 300px;
             position: relative;
-            border: 2px solid #12d7e6; /* All cards now have border */
-        }
-        /* Remove premium badge */
-        .premium-badge {
-            display: none;
+            border: 2px solid #12d7e6;
         }
         @media (max-width: 900px) {
             .services-grid {
@@ -128,6 +123,70 @@
         .nav-link.pricing-link {
             color: #12d7e6;
             font-weight: bold;
+        }
+        /* Pricing Model Section */
+        .pricing-model-section {
+            margin-top: 64px;
+            margin-bottom: 64px;
+            background: #23292f;
+            border-radius: 24px;
+            box-shadow: 0 2px 16px rgba(18,215,230,0.07);
+            border: 2px solid #12d7e6;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 48px 24px;
+        }
+        .pricing-model-header {
+            color: #12d7e6;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 32px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .pricing-model-tiers {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .pricing-tier {
+            background: #23292f;
+            border-radius: 16px;
+            border: 2px solid #12d7e6;
+            color: #fff;
+            padding: 32px 24px;
+            min-width: 280px;
+            max-width: 320px;
+            flex: 1 1 320px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .pricing-tier h4 {
+            color: #12d7e6;
+            font-size: 1.4rem;
+            margin-bottom: 14px;
+            font-weight: bold;
+        }
+        .pricing-tier strong {
+            color: #fff;
+        }
+        .pricing-tier p {
+            margin-bottom: 0.6em;
+        }
+        @media (max-width: 900px) {
+            .pricing-model-tiers {
+                flex-direction: column;
+            }
+            .pricing-model-section {
+                padding: 24px 8px;
+            }
+        }
+        @media (max-width: 600px) {
+            .pricing-tier {
+                padding: 16px;
+            }
         }
     </style>
 </head>
@@ -310,169 +369,25 @@
         </div>
     </section>
 
-    <!-- Pricing Model Section -->
-    <section id="pricing-model" class="pricing-section">
-        <div class="pricing-section-header">Pricing Model</div>
-        <div class="pricing-model-grid">
-            <div class="pricing-card">
+    <!-- Pricing Model Section (restored original layout, above contact section)-->
+    <section id="pricing-model" class="pricing-model-section">
+        <div class="pricing-model-header">Pricing Model</div>
+        <div class="pricing-model-tiers">
+            <div class="pricing-tier">
                 <h4>Tier 1 - Starter ($25/month)</h4>
                 <p>An AI-powered assistant that analyzes your business data to provide tailored advice.</p>
             </div>
-            <div class="pricing-card">
+            <div class="pricing-tier">
                 <h4>Tier 2 - Pro ($50/month)</h4>
                 <p><strong>Market Insights:</strong> AI-generated market insights</p>
                 <p><strong>Reports:</strong> Trend reports</p>
                 <p><strong>Webinars:</strong> Group strategy webinars</p>
             </div>
-            <div class="pricing-card">
+            <div class="pricing-tier">
                 <h4>Tier 3 - Expert ($75/month)</h4>
                 <p><strong>Includes all Pro features</strong></p>
                 <p><strong>Consultant Sessions:</strong> Personalized monthly sessions with a personal consultant</p>
                 <p><strong>Support:</strong> Hands-on support for your business growth</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Strategic Plan Section -->
-    <section id="strategy" class="strategy-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Strategic Plan</h2>
-                <p>12-month roadmap for growth and market leadership</p>
-            </div>
-            <div class="strategy-content">
-                <div class="market-opportunity">
-                    <h3>Market Opportunity Analysis</h3>
-                    <div class="opportunity-grid">
-                        <div class="opportunity-item">
-                            <span class="opportunity-stat">$26.2B</span>
-                            <p>Total Canadian consulting market with 2.4% annual growth</p>
-                        </div>
-                        <div class="opportunity-item">
-                            <span class="opportunity-stat">12%</span>
-                            <p>Current AI adoption rate - massive opportunity for growth</p>
-                        </div>
-                        <div class="opportunity-item">
-                            <span class="opportunity-stat">74%</span>
-                            <p>CEOs struggle with ESG compliance - our specialty</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="action-plan">
-                    <h3>12-Month Action Plan</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-period">Q1 2025</div>
-                            <div class="timeline-content">
-                                <h4>Foundation &amp; Launch</h4>
-                                <ul>
-                                    <li>Establish core service offerings</li>
-                                    <li>Build referral network</li>
-                                    <li>Target: 3 initial clients</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-period">Q2 2025</div>
-                            <div class="timeline-content">
-                                <h4>Growth &amp; Expansion</h4>
-                                <ul>
-                                    <li>Scale to 8-10 active clients</li>
-                                    <li>Develop ESG specialization</li>
-                                    <li>Chamber of Commerce partnerships</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-period">Q3-Q4 2025</div>
-                            <div class="timeline-content">
-                                <h4>Market Leadership</h4>
-                                <ul>
-                                    <li>15+ client portfolio</li>
-                                    <li>AI transformation expertise</li>
-                                    <li>Regional market recognition</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="kpis">
-                    <h3>Key Performance Indicators</h3>
-                    <div class="kpi-grid">
-                        <div class="kpi-item">
-                            <span class="kpi-number">15+</span>
-                            <span class="kpi-label">Active Clients</span>
-                        </div>
-                        <div class="kpi-item">
-                            <span class="kpi-number">$300K</span>
-                            <span class="kpi-label">Annual Revenue Target</span>
-                        </div>
-                        <div class="kpi-item">
-                            <span class="kpi-number">85%</span>
-                            <span class="kpi-label">Client Retention Rate</span>
-                        </div>
-                        <div class="kpi-item">
-                            <span class="kpi-number">40%</span>
-                            <span class="kpi-label">Referral-Based Growth</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Distribution Section -->
-    <section id="distribution" class="distribution-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Distribution Strategy</h2>
-                <p>Multiple channels to connect with Canadian SMEs</p>
-            </div>
-            <div class="distribution-content">
-                <div class="primary-channel">
-                    <h3>Core Distribution Channel</h3>
-                    <div class="channel-card primary">
-                        <h4>Direct B2B Sales &amp; Referral Network</h4>
-                        <p>Personal relationships and word-of-mouth recommendations from satisfied clients form the foundation of our growth strategy.</p>
-                        <div class="channel-benefits">
-                            <span class="benefit">High-quality leads</span>
-                            <span class="benefit">Lower acquisition costs</span>
-                            <span class="benefit">Strong client relationships</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="alternative-channels">
-                    <h3>Alternative Distribution Channels</h3>
-                    <div class="channels-grid">
-                        <div class="channel-card">
-                            <h4>Digital Marketing</h4>
-                            <p>LinkedIn outreach, content marketing, and targeted online advertising to reach SME decision-makers.</p>
-                            <div class="channel-roi">
-                                <span class="roi-label">Expected ROI:</span>
-                                <span class="roi-value">3:1</span>
-                            </div>
-                        </div>
-                        <div class="channel-card">
-                            <h4>Chamber of Commerce Partnerships</h4>
-                            <p>Strategic partnerships with local chambers to access member networks and speaking opportunities.</p>
-                            <div class="channel-roi">
-                                <span class="roi-label">Member Access:</span>
-                                <span class="roi-value">500+ SMEs</span>
-                            </div>
-                        </div>
-                        <div class="channel-card">
-                            <h4>Professional Networks</h4>
-                            <p>Accounting firms, legal practices, and other professional service partnerships for client referrals.</p>
-                            <div class="channel-roi">
-                                <span class="roi-label">Referral Rate:</span>
-                                <span class="roi-value">25%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
