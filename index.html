@@ -20,6 +20,7 @@
             width: 400px;
             height: 400px;
             background: radial-gradient(circle at 30% 30%, #12d7e6 0%, transparent 70%);
+            /* turned off so it won't highlight the CTA */
             opacity: 0.0;
             pointer-events: none;
         }
@@ -46,10 +47,9 @@
             border-radius: 32px;
             font-size: 1rem;
             padding: 18px 32px;
-            /* box-shadow removed for flat style */
-            /* background effect removed */
             cursor: pointer;
             transition: background 0.2s;
+            /* no box-shadow / glow so it stays flat against the background */
         }
         .cta-sticky-btn:hover {
             background: #0ca3b2;
@@ -89,7 +89,7 @@
         .newsletter-signup button:hover {
             background: #0ca3b2;
         }
-        /* Service Card Styles */
+        /* Service Card Styles - unified border for all cards */
         .services-grid {
             display: flex;
             gap: 32px;
@@ -104,22 +104,9 @@
             flex: 1 1 340px;
             min-width: 300px;
             position: relative;
+            border: 2px solid #12d7e6; /* unified teal border for all service cards */
         }
-        .service-card.with-border {
-            border: 2px solid #12d7e6;
-        }
-        .premium-badge {
-            background: #12d7e6;
-            color: #fff;
-            padding: 4px 16px;
-            border-radius: 12px;
-            position: absolute;
-            top: 24px;
-            right: 24px;
-            font-size: 0.95rem;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
+        /* removed .premium-badge CSS block and removed the HTML so nothing will show */
         /* Pricing Model Section */
         .pricing-section {
             background: linear-gradient(110deg, #142d35 0%, #0a4d5c 100%);
@@ -334,10 +321,9 @@
                     <p class="service-target"><strong>Ideal for:</strong> Businesses struggling with manual processes and seeking operational efficiency</p>
                 </div>
 
-                <div class="service-card with-border">
+                <div class="service-card">
                     <div class="service-header">
                         <h3>ESG Compliance &amp; Sustainability Consulting</h3>
-                        <span class="premium-badge">Premium</span>
                     </div>
                     <p class="service-description">Navigate ESG requirements and build sustainable practices that meet regulatory standards.</p>
                     <div class="service-features">
@@ -352,7 +338,7 @@
                     <p class="service-target"><strong>Ideal for:</strong> Companies needing ESG compliance (82% adoption rate among target market)</p>
                 </div>
 
-                <div class="service-card with-border">
+                <div class="service-card">
                     <div class="service-header">
                         <h3>AI Adoption &amp; Digital Transformation</h3>
                     </div>
