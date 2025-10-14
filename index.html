@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,8 +46,6 @@
             border-radius: 32px;
             font-size: 1rem;
             padding: 18px 32px;
-            /* box-shadow removed for flat style */
-            /* background effect removed */
             cursor: pointer;
             transition: background 0.2s;
         }
@@ -104,77 +102,15 @@
             flex: 1 1 340px;
             min-width: 300px;
             position: relative;
+            border: 2px solid #12d7e6; /* All cards now have border */
         }
-        .service-card.with-border {
-            border: 2px solid #12d7e6;
-        }
+        /* Remove premium badge */
         .premium-badge {
-            background: #12d7e6;
-            color: #fff;
-            padding: 4px 16px;
-            border-radius: 12px;
-            position: absolute;
-            top: 24px;
-            right: 24px;
-            font-size: 0.95rem;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-        /* Pricing Model Section */
-        .pricing-section {
-            background: linear-gradient(110deg, #142d35 0%, #0a4d5c 100%);
-            border-radius: 32px;
-            margin: 64px auto 64px auto;
-            padding: 48px 24px;
-            max-width: 1200px;
-            box-shadow: 0 8px 32px rgba(18,215,230,0.10);
-            border: 2px solid #12d7e6;
-        }
-        .pricing-section-header {
-            text-align: center;
-            color: #12d7e6;
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 36px;
-            letter-spacing: 1.2px;
-        }
-        .pricing-model-grid {
-            display: flex;
-            gap: 36px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .pricing-card {
-            background: #23292f;
-            color: #fff;
-            border-radius: 20px;
-            padding: 32px 24px;
-            min-width: 300px;
-            max-width: 340px;
-            flex: 1 1 340px;
-            margin-bottom: 24px;
-            box-shadow: 0 2px 16px rgba(18,215,230,0.05);
-            border: 2px solid #12d7e6;
-            text-align: center;
-        }
-        .pricing-card h4 {
-            color: #12d7e6;
-            font-size: 1.35rem;
-            margin-bottom: 18px;
-            font-weight: bold;
-        }
-        .pricing-card strong {
-            color: #fff;
-        }
-        .pricing-card p {
-            margin-bottom: 0.6em;
+            display: none;
         }
         @media (max-width: 900px) {
-            .pricing-model-grid, .services-grid {
+            .services-grid {
                 flex-direction: column;
-            }
-            .pricing-section {
-                padding: 24px 8px;
             }
         }
         @media (max-width: 600px) {
@@ -185,7 +121,7 @@
             .newsletter-signup input[type="email"] {
                 width: 160px;
             }
-            .service-card, .pricing-card {
+            .service-card {
                 padding: 16px;
             }
         }
@@ -334,10 +270,9 @@
                     <p class="service-target"><strong>Ideal for:</strong> Businesses struggling with manual processes and seeking operational efficiency</p>
                 </div>
 
-                <div class="service-card with-border">
+                <div class="service-card">
                     <div class="service-header">
                         <h3>ESG Compliance &amp; Sustainability Consulting</h3>
-                        <span class="premium-badge">Premium</span>
                     </div>
                     <p class="service-description">Navigate ESG requirements and build sustainable practices that meet regulatory standards.</p>
                     <div class="service-features">
@@ -352,7 +287,7 @@
                     <p class="service-target"><strong>Ideal for:</strong> Companies needing ESG compliance (82% adoption rate among target market)</p>
                 </div>
 
-                <div class="service-card with-border">
+                <div class="service-card">
                     <div class="service-header">
                         <h3>AI Adoption &amp; Digital Transformation</h3>
                     </div>
