@@ -6,6 +6,32 @@
     <title>BizNest - Smart Solutions for Growing Businesses</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
+        body {
+            background: linear-gradient(120deg, #222 0%, #1a2636 100%);
+            position: relative;
+            min-height: 100vh;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            z-index: 0;
+            bottom: -120px;
+            right: -120px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle at 30% 30%, #12d7e6 0%, transparent 70%);
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            z-index: 0;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: url('https://www.transparenttextures.com/patterns/noise.png');
+            opacity: 0.08;
+            pointer-events: none;
+        }
         /* Sticky CTA Button */
         .cta-sticky {
             position: fixed;
@@ -20,7 +46,6 @@
             border-radius: 32px;
             font-size: 1rem;
             padding: 18px 32px;
-            box-shadow: 0 4px 16px rgba(18, 215, 230, 0.15);
             cursor: pointer;
             transition: background 0.2s;
         }
@@ -62,6 +87,95 @@
         .newsletter-signup button:hover {
             background: #0ca3b2;
         }
+        /* Service Card Styles */
+        .services-grid {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background: #222;
+            color: #fff;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            flex: 1 1 340px;
+            min-width: 300px;
+            position: relative;
+        }
+        .service-card.with-border {
+            border: 2px solid #12d7e6;
+        }
+        /* Premium badge style */
+        .premium-badge {
+            background: #12d7e6;
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 12px;
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        /* Pricing Model Section */
+        .pricing-section {
+            background: linear-gradient(110deg, #142d35 0%, #0a4d5c 100%);
+            border-radius: 32px;
+            margin: 64px auto 64px auto;
+            padding: 48px 24px;
+            max-width: 1200px;
+            box-shadow: 0 8px 32px rgba(18,215,230,0.10);
+            border: 2px solid #12d7e6;
+        }
+        .pricing-section-header {
+            text-align: center;
+            color: #12d7e6;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 36px;
+            letter-spacing: 1.2px;
+        }
+        .pricing-model-grid {
+            display: flex;
+            gap: 36px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .pricing-card {
+            background: #23292f;
+            color: #fff;
+            border-radius: 20px;
+            padding: 32px 24px;
+            min-width: 300px;
+            max-width: 340px;
+            flex: 1 1 340px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 16px rgba(18,215,230,0.05);
+            border: 2px solid #12d7e6;
+            text-align: center;
+        }
+        .pricing-card h4 {
+            color: #12d7e6;
+            font-size: 1.35rem;
+            margin-bottom: 18px;
+            font-weight: bold;
+        }
+        .pricing-card strong {
+            color: #fff;
+        }
+        .pricing-card p {
+            margin-bottom: 0.6em;
+        }
+        @media (max-width: 900px) {
+            .pricing-model-grid, .services-grid {
+                flex-direction: column;
+            }
+            .pricing-section {
+                padding: 24px 8px;
+            }
+        }
         @media (max-width: 600px) {
             .cta-sticky {
                 right: 12px;
@@ -70,6 +184,14 @@
             .newsletter-signup input[type="email"] {
                 width: 160px;
             }
+            .service-card, .pricing-card {
+                padding: 16px;
+            }
+        }
+        /* NAV: Add pricing link highlight */
+        .nav-link.pricing-link {
+            color: #12d7e6;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -94,6 +216,7 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#strategy" class="nav-link">Strategic Plan</a>
                 <a href="#distribution" class="nav-link">Distribution</a>
+                <a href="#pricing-model" class="nav-link pricing-link">Pricing</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <button class="nav-toggle" id="navToggle">
@@ -197,7 +320,6 @@
                 <div class="service-card">
                     <div class="service-header">
                         <h3>Business Process Optimization &amp; SaaS Implementation</h3>
-                        <!-- REMOVED: <p class="service-price">$150-200/hour | Projects $5K-25K</p> -->
                     </div>
                     <p class="service-description">Streamline operations and implement the right software tools to boost efficiency and productivity.</p>
                     <div class="service-features">
@@ -212,10 +334,9 @@
                     <p class="service-target"><strong>Ideal for:</strong> Businesses struggling with manual processes and seeking operational efficiency</p>
                 </div>
 
-                <div class="service-card featured">
+                <div class="service-card with-border">
                     <div class="service-header">
                         <h3>ESG Compliance &amp; Sustainability Consulting</h3>
-                        <!-- REMOVED: <p class="service-price">$200-250/hour | Premium Service</p> -->
                         <span class="premium-badge">Premium</span>
                     </div>
                     <p class="service-description">Navigate ESG requirements and build sustainable practices that meet regulatory standards.</p>
@@ -231,10 +352,9 @@
                     <p class="service-target"><strong>Ideal for:</strong> Companies needing ESG compliance (82% adoption rate among target market)</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card with-border">
                     <div class="service-header">
                         <h3>AI Adoption &amp; Digital Transformation</h3>
-                        <!-- REMOVED: <p class="service-price">$175-250/hour | Projects $10K-50K</p> -->
                     </div>
                     <p class="service-description">Practical AI implementation and digital transformation to stay competitive in the modern market.</p>
                     <div class="service-features">
@@ -251,6 +371,29 @@
             </div>
             <div class="services-cta">
                 <button class="btn btn--primary" onclick="scrollToSection('contact')">Discuss Your Needs</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Model Section -->
+    <section id="pricing-model" class="pricing-section">
+        <div class="pricing-section-header">Pricing Model</div>
+        <div class="pricing-model-grid">
+            <div class="pricing-card">
+                <h4>Tier 1 - Starter ($25/month)</h4>
+                <p>An AI-powered assistant that analyzes your business data to provide tailored advice.</p>
+            </div>
+            <div class="pricing-card">
+                <h4>Tier 2 - Pro ($50/month)</h4>
+                <p><strong>Market Insights:</strong> AI-generated market insights</p>
+                <p><strong>Reports:</strong> Trend reports</p>
+                <p><strong>Webinars:</strong> Group strategy webinars</p>
+            </div>
+            <div class="pricing-card">
+                <h4>Tier 3 - Expert ($75/month)</h4>
+                <p><strong>Includes all Pro features</strong></p>
+                <p><strong>Consultant Sessions:</strong> Personalized monthly sessions with a personal consultant</p>
+                <p><strong>Support:</strong> Hands-on support for your business growth</p>
             </div>
         </div>
     </section>
@@ -395,37 +538,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="cost-analysis">
-                    <h3>Business Model Alignment</h3>
-                    <div class="model-grid">
-                        <!-- Tier 1 Card -->
-                        <div class="model-item">
-                            <h4 style="color: #12d7e6; text-align: center;">Tier 1 - Starter ($25/month)</h4>
-                            <p style="text-align: center;">
-                                An AI-powered assistant that analyzes your business data to provide tailored advice.
-                            </p>
-                        </div>
-                        <!-- Tier 2 Card -->
-                        <div class="model-item">
-                            <h4 style="color: #12d7e6; text-align: center;">Tier 2 - Pro ($50/month)</h4>
-                            <p style="text-align: center;">
-                                <strong>Market Insights:</strong> AI-generated market insights<br>
-                                <strong>Reports:</strong> Trend reports<br>
-                                <strong>Webinars:</strong> Group strategy webinars
-                            </p>
-                        </div>
-                        <!-- Tier 3 Card -->
-                        <div class="model-item">
-                            <h4 style="color: #12d7e6; text-align: center;">Tier 3 - Expert ($75/month)</h4>
-                            <p style="text-align: center;">
-                                <strong>Includes all Pro features</strong><br>
-                                <strong>Consultant Sessions:</strong> Personalized monthly sessions with a personal consultant<br>
-                                <strong>Support:</strong> Hands-on support for your business growth
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -516,6 +628,7 @@
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
+                    <a href="#pricing-model">Pricing</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
